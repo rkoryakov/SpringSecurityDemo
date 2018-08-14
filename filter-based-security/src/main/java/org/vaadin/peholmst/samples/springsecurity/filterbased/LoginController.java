@@ -27,7 +27,7 @@ public class LoginController {
         if (loggedOut != null) {
             modelAndView.addObject("loggedOut", true);
         }
-        modelAndView.addObject("contextPath", serverProperties.getContextPath());
+        modelAndView.addObject("contextPath", serverProperties.getServlet().getContextPath());
         modelAndView.setViewName("login");
         return modelAndView;
     }
